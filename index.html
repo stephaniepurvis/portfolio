@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Stephanie Purvis Portfolio</title>
+
+    <!-- Why yes, I did use Claude to help me make this website. 
+     But I got in here and edited the code too. Can I build sites from scratch? 
+     Yes. But why would I do that now days?! 
+     Don't be hatin' ;p -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-logo">Stephanie Purvis</div>
+        <div class="nav-links">
+            <a href="#portfolio">Work</a>
+            <a href="#about">About</a>
+            <a href="#resume">Resume</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-badge">Digital Marketing Leader</div>
+        
+        <h1>Crafting digital campaigns that<br><span>connect & convert</span></h1>
+        
+        <p>I design beautiful, on-brand web, email, and lifecycle campaigns that captivate audiences and drive measurable&nbsp;results.</p>
+        
+        <div class="hero-btns">
+            <a href="#portfolio" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+        
+        <div class="hero-decoration">
+            <img src="images/divider.svg" width="100" alt="" role="presentation">
+        </div>
+
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+
+        <div class="section-header">
+            <div class="section-label">Portfolio</div>
+            <h2 class="section-title">Featured Designs</h2>
+            <p class="section-sub">A selection of campaign designs across industries and styles.</p>
+        </div>
+
+        <div class="portfolio-grid" id="grid"></div>
+
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+
+    <div class="about-inner">
+
+        <div><div class="about-avatar"></div></div>
+
+        <div class="about-text">
+        <div class="section-label">About Me</div>
+        
+        <h2 class="section-title">Hi, I'm Stephanie!</h2>
+        
+        <p class="about-bio">I'm a digital marketer and designer with 15+ years of experience crafting campaigns for brands across retail, wellness, and SaaS. I blend strategic thinking with an eye for detail.</p>
+        <!-- <p class="about-bio">From welcome series to seasonal promotions, I love turning a brand's voice into campaigns that land beautifully in every inbox.</p> -->
+        
+        <div class="skills">
+            <span class="skill-tag">Email Design</span>
+            <span class="skill-tag">Figma</span>
+            
+            <span class="skill-tag">Lifecycle Marketing</span>
+            <span class="skill-tag">HTML/CSS</span>
+            <span class="skill-tag">A/B Testing</span>
+            <span class="skill-tag">AI</span>
+            <span class="skill-tag">Digital Marketing</span>
+            <span class="skill-tag">Strategy</span>
+            <span class="skill-tag">Data Analysis</span>
+            <span class="skill-tag">Email Marketing</span>
+            <span class="skill-tag">CRM</span>
+            <span class="skill-tag">Cross Functional Team Leadership</span>
+            <span class="skill-tag">Web Design</span>
+            <span class="skill-tag">Front-end Development</span>
+            <span class="skill-tag">Javascript</span>
+            
+        </div>
+
+        </div>
+
+    </div>
+
+    </section>
+
+<!-- RESUME -->
+<section id="resume">
+  <div class="resume-card">
+    <div class="resume-icon">📄</div>
+    <h3>Download My Resume</h3>
+    <p>Get a full overview of my experience, skills, tools, and education - all in one place.</p>
+    <a href="pdf/Stephanie-Purvis-Resume.pdf" class="btn btn-primary">Download Resume &darr;</a>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="section-header">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-sub">Have a project in mind? I'd love to hear from you.</p>
+    </div>
+    <div class="form-group"><label>Name</label><input type="text" id="f-name" placeholder="Your name"></div>
+    <div class="form-group"><label>Email</label><input type="email" id="f-email" placeholder="your@email.com"></div>
+    <div class="form-group"><label>Message</label><textarea id="f-msg" placeholder="Tell me about your project..."></textarea></div>
+    <button class="btn btn-primary form-submit" onclick="sendMsg()">Send Message ✦</button>
+    <div class="success-msg" id="success">Thank you! I'll be in touch soon. ✦</div>
+    <div class="success-msg" id="error" style="background:#fff0f0;border-color:#e8a4a4;color:#a04040">Something went wrong. Please try again.</div>
+  </div>
+</section>
+
+<footer>
+  <p><span>Stephanie Purvis</span> &copy; 2026</p>
+</footer>
+
+<script>
+const emails=[
+  {tag:"",title:"",img:"images/feature-designs/satya.png", link:"projects/satya/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/allegro.jpg", link:"projects/allegro/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/tyr.jpg", link:"projects/tyr/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/grimaud.jpg", link:"projects/grimaud/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/mersea.jpg", link:"projects/mersea/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/massage-warehouse.jpg", link:"projects/massage-warehouse/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/oesd.jpg", link:"projects/oesd/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/ptr.jpg", link:"projects/ptr/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/shark-ninja.jpg", link:"projects/shark-ninja/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/verb.jpg", link:"projects/verb/index.html"},
+  {tag:"",title:"",img:"images/feature-designs/united-monograms.jpg", link:"projects/united-monogram/index.html"},
+  
+];
+
+
+
+
+function buildMock(c){
+  return`<div class="mock" style="background:${c.bg}">
+    <div class="mock-header" style="background:${c.header}22">
+      <div class="mock-logo" style="background:${c.accent}"></div>
+      <span class="mock-brand" style="color:${c.accent}">BRAND</span>
+    </div>
+    <div class="mock-hero-img" style="background:${c.header}33;color:${c.accent}">${c.heroTxt}</div>
+    <div class="mock-body">
+      <div class="mock-h" style="background:${c.accent};width:${c.p1}"></div>
+      <div class="mock-p" style="background:${c.accent}55;width:${c.p2}"></div>
+      <div class="mock-p" style="background:${c.accent}40;width:${c.p3}"></div>
+      <div class="mock-btn-row"><div class="mock-btn" style="background:${c.accent}"></div></div>
+    </div>
+    <div class="mock-footer" style="background:${c.header}22"></div>
+  </div>`;
+}
+
+const grid=document.getElementById('grid');
+const heights=['260px','320px','400px','280px','360px','300px','340px','260px','380px'];
+emails.forEach((e,i)=>{
+  const h=heights[i%heights.length];
+  const card=document.createElement('div');
+  card.className='card';
+      const imgContent = e.img
+    ? `<img src="${e.img}" style="width:100%;height:100%;object-fit:cover;display:block">`
+    : `<div style="height:${h}">${buildMock(e.colors)}</div>`;
+  card.innerHTML=`
+    <div class="card-img" style="position:relative">
+      ${imgContent}
+      <a href="${e.link}">
+        <div class="card-overlay">
+          <div class="overlay-label">${e.tag}</div>
+          <div class="overlay-title">${e.title}</div>
+          <div class="overlay-btn">View Project</div>
+        </div>
+      </a>
+    </div>
+    <div class="card-info">
+      <div class="card-tag">${e.tag}</div>
+      <div class="card-title">${e.title}</div>
+    </div>`;
+  grid.appendChild(card);
+});
+
+function sendMsg(){
+  const name=document.getElementById('f-name').value.trim();
+  const email=document.getElementById('f-email').value.trim();
+  const msg=document.getElementById('f-msg').value.trim();
+  if(!name||!email||!msg) return;
+  fetch('https://formspree.io/f/xrerrebl',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({name,email,message:msg})
+  }).then(r=>{
+    if(r.ok){
+      document.getElementById('success').style.display='block';
+      document.getElementById('f-name').value='';
+      document.getElementById('f-email').value='';
+      document.getElementById('f-msg').value='';
+    } else {
+      document.getElementById('error').style.display='block';
+    }
+  }).catch(()=>document.getElementById('error').style.display='block');
+}
+</script>
+</body>
+</html>
